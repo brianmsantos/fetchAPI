@@ -7,8 +7,17 @@
 </head>
 
 <body>
+    
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
+    unirest.post("https://NasaAPIdimasV1.p.rapidapi.com/getAsteroidStats")
+    .header("X-RapidAPI-Host", "NasaAPIdimasV1.p.rapidapi.com")
+    .header("X-RapidAPI-Key", "43b2325b48mshcd9760d3aa925e1p1316a2jsnc6aa2d28b033")
+    .header("Content-Type", "application/x-www-form-urlencoded")
+    .end(function (result) {
+     console.log(result.status, result.headers, result.body);
+}   );
+
     // Performing GET requests to the OMDB API and logging the responses to the console
     $.ajax({
       url: "https://www.omdbapi.com/?t=romancing+the+stone&y=&plot=short&apikey=trilogy",
