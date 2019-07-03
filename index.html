@@ -3,13 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Multiple AJAX</title>
+  <title>Fetch API</title>
 </head>
 
 <body>
     
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
+    var unirest = require('unirest');
+
     unirest.post("https://NasaAPIdimasV1.p.rapidapi.com/getAsteroidStats")
     .header("X-RapidAPI-Host", "NasaAPIdimasV1.p.rapidapi.com")
     .header("X-RapidAPI-Key", "43b2325b48mshcd9760d3aa925e1p1316a2jsnc6aa2d28b033")
@@ -18,58 +20,58 @@
      console.log(result.status, result.headers, result.body);
 }   );
 
-    // Performing GET requests to the OMDB API and logging the responses to the console
-    $.ajax({
-      url: "https://www.omdbapi.com/?t=romancing+the+stone&y=&plot=short&apikey=trilogy",
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
-    });
+//     // Performing GET requests to the OMDB API and logging the responses to the console
+//     $.ajax({
+//       url: "https://www.omdbapi.com/?t=romancing+the+stone&y=&plot=short&apikey=trilogy",
+//       method: "GET"
+//     }).then(function(response) {
+//       console.log(response);
+//     });
 
-    $.ajax({
-      url: "https://www.omdbapi.com/?t=the+revenant&y=&plot=short&apikey=trilogy",
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
-    });
+//     $.ajax({
+//       url: "https://www.omdbapi.com/?t=the+revenant&y=&plot=short&apikey=trilogy",
+//       method: "GET"
+//     }).then(function(response) {
+//       console.log(response);
+//     });
 
-    $.ajax({
-      url: "https://www.omdbapi.com/?t=god+father&y=&plot=short&apikey=trilogy",
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
-    });
+//     $.ajax({
+//       url: "https://www.omdbapi.com/?t=god+father&y=&plot=short&apikey=trilogy",
+//       method: "GET"
+//     }).then(function(response) {
+//       console.log(response);
+//     });
 
-    $.ajax({
-      url: "https://www.omdbapi.com/?t=space+jam&y=&plot=short&apikey=trilogy",
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
-    });
+//     $.ajax({
+//       url: "https://www.omdbapi.com/?t=space+jam&y=&plot=short&apikey=trilogy",
+//       method: "GET"
+//     }).then(function(response) {
+//       console.log(response);
+//     });
 
-    $.ajax({
-      url: "https://www.omdbapi.com/?t=boiler+room&y=&plot=short&apikey=trilogy",
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
-    });
+//     $.ajax({
+//       url: "https://www.omdbapi.com/?t=boiler+room&y=&plot=short&apikey=trilogy",
+//       method: "GET"
+//     }).then(function(response) {
+//       console.log(response);
+//     });
 
-    $.ajax({
-      url: "https://www.omdbapi.com/?t=inception&y=&plot=short&apikey=trilogy",
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
-    });
+//     $.ajax({
+//       url: "https://www.omdbapi.com/?t=inception&y=&plot=short&apikey=trilogy",
+//       method: "GET"
+//     }).then(function(response) {
+//       console.log(response);
+//     });
 
-    $.ajax({
-      url: "https://www.omdbapi.com/?t=the+dark+night&y=&plot=short&apikey=trilogy",
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
-    });
-// ---------------------------------------------------------
+//     $.ajax({
+//       url: "https://www.omdbapi.com/?t=the+dark+night&y=&plot=short&apikey=trilogy",
+//       method: "GET"
+//     }).then(function(response) {
+//       console.log(response);
+//     });
+// // ---------------------------------------------------------
 
-    console.log("Because our AJAX requests are asynchronous, this line of code will most likely log first");
+//     console.log("Because our AJAX requests are asynchronous, this line of code will most likely log first");
   </script>
 
 </body>
